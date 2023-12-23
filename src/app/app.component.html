@@ -2,38 +2,19 @@
   <section class="chat">
     <div class="chat-timeline">
       <div
+        *ngFor="let comment of comments"
         class="list-group-item list-group-item-action flex-column align-items-start border-0"
       >
         <div class="media">
           <div class="media-left">
-            <a href="#" class="icon">K</a>
+            <a href="#" class="icon">{{ comment.name[0] }}</a>
           </div>
           <div class="media-body">
             <div class="d-flex w-100 justify-content-between">
-              <h4 class="media-heading">Kagami</h4>
+              <h4 class="media-heading">{{ comment.name }}</h4>
               <small class="media-date">2020/12/01</small>
             </div>
-            <pre>
-ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。</pre
-            >
-          </div>
-        </div>
-      </div>
-      <div
-        class="list-group-item list-group-item-action flex-column align-items-start border-0"
-      >
-        <div class="media">
-          <div class="media-body">
-            <div class="d-flex w-100 justify-content-between">
-              <h4 class="media-heading">Alice</h4>
-              <small class="media-date">2020/12/01</small>
-            </div>
-            <pre>
-ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。</pre
-            >
-          </div>
-          <div class="media-right">
-            <a href="#" class="icon">A</a>
+            <pre>{{ comment.message }}</pre>
           </div>
         </div>
       </div>
