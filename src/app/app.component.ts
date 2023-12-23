@@ -23,6 +23,7 @@ export class AppComponent {
   comments = COMMENTS;
   currentUser = CURRENT_USER;
   comment = '';
+  commentDateFormat = 'yyyy-MM-dd HH:mm:ss';
 
   addComment(comment: string): void {
     if (comment) {
