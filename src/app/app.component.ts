@@ -7,9 +7,9 @@ const CURRENT_USER: User = new User(1, 'Kagami');
 const ANOTHER_USER: User = new User(2, 'Alice');
 
 const COMMENTS: Comment[] = [
-  new Comment(ANOTHER_USER, 'test: 初期表示'),
+  new Comment(CURRENT_USER, 'test: 初期表示'),
   new Comment(ANOTHER_USER, `test: I'm ${ANOTHER_USER.name}`),
-  new Comment(ANOTHER_USER, `test: I'm ${CURRENT_USER.name}`),
+  new Comment(CURRENT_USER, `test: I'm ${CURRENT_USER.name}`),
   new Comment(ANOTHER_USER, '⭕'),
 ];
 
@@ -22,7 +22,6 @@ export class AppComponent {
   comments = COMMENTS;
   currentUser = CURRENT_USER;
   comment = '';
-  commentDateFormat = 'yyyy-MM-dd HH:mm:ss';
 
   addComment(comment: string): void {
     if (comment) {
