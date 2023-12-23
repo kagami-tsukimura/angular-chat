@@ -7,10 +7,9 @@ const CURRENT_USER: User = new User(1, 'Kagami');
 const ANOTHER_USER: User = new User(2, 'Alice');
 
 const COMMENTS: Comment[] = [
-  new Comment(ANOTHER_USER, 'お疲れ！'),
-  new Comment(ANOTHER_USER, '明日の夜に時間もらえる？'),
-  new Comment(CURRENT_USER, 'お疲れさま！'),
-  new Comment(CURRENT_USER, '了解！ いつもの場所に19時で良い？'),
+  new Comment(ANOTHER_USER, 'test: 初期表示'),
+  new Comment(ANOTHER_USER, `test: I'm ${ANOTHER_USER.name}`),
+  new Comment(ANOTHER_USER, `test: I'm ${CURRENT_USER.name}`),
   new Comment(ANOTHER_USER, '⭕'),
 ];
 
